@@ -1,0 +1,11 @@
+def firstchar(name):
+    return name[0].upper()
+
+names = ['Ellison', 'mark', 'george', 'Marshall']
+
+for v in map(len, names):
+    print(v)
+
+for v in map(firstchar, names):
+    print(v)
+
