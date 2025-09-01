@@ -9,3 +9,6 @@ for v in map(len, names):
 for v in map(firstchar, names):
     print(v)
 
+for v in map(lambda n : n[0].upper(), names):
+    print(v)
+

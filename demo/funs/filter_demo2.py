@@ -2,7 +2,6 @@ def isbigname(name):
     print('Callled with ', name)
     return len(name) > 5
 
-
 names = ['Ellison', 'Mark', 'George', 'Marshall']
 
 for n in filter(isbigname, names):
