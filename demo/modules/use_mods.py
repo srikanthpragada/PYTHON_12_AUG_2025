@@ -1,5 +1,6 @@
 import math_funs as mf
 from math_funs import ispositive
+from math_funs import *
 
 import sys
 
