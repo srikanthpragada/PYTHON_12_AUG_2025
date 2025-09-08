@@ -1,14 +1,24 @@
 class Account:
-    def __init__(self, acno, ahname, balance=0):
+    #class attribute
+    minbalance = 5000
+
+    @staticmethod
+    def set_minbalance(balance):
+        Account.minbalance = balance
+
+    def __init__(self, acno, ahname, balance):
         self.acno = acno
         self.ahname = ahname
+        if balance < Account.minbalance:
+            raise ValueError('Minimum Balance is not provided!')
+
         self.balance = balance
 
     def deposit(self, amount):
         self.balance += amount
 
     def withdraw(self, amount):
-        if self.balance >= amount:
+        if self.balance - Account.minbalance >= amount:
             self.balance -= amount
         else:
             raise ValueError('Insufficient Balance!')
