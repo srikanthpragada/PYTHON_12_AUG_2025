@@ -14,6 +14,7 @@ class Stack:
     def isempty(self):
         return self.length() == 0
 
+    @property
     def length(self):
         return len(self.data)
 
@@ -25,4 +26,4 @@ s = Stack()
 s.push(10)
 s.push(20)
 print(s.peek())
-print(s.length())
+print(s.length)
