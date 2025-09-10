@@ -10,6 +10,10 @@ class Employee:
     def get_salary(self):
         return self.salary
 
+    def set_salary(self, newsalary):
+        self.salary = newsalary
+
+
 
 class Manager(Employee):
     def __init__(self, name, salary, hra):
