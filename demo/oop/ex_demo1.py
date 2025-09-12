@@ -1,10 +1,10 @@
 
-l = [1,3,4]
+l = [1, 3, 0]
 try:
-    i = 2
-    print(l[i])
-except:
-    print('Sorry! Index error!')
+    i = 4
+    print(10 // l[i])
+except Exception as ex:
+    print('Sorry! ' + str(ex))
 
 print("The End")
 
