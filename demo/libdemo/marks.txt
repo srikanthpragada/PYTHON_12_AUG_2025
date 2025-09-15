@@ -1,0 +1,6 @@
+Joe,88,56,A,70
+
+Anders,84,88,73
+Roberts,99,88,74
+Micheal,83,44,59
+Tommy,87
