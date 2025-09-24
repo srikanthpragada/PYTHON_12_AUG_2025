@@ -4,11 +4,12 @@ import dbutil
 con = sqlite3.connect(dbutil.DBNAME)
 cur = con.cursor()
 f = open('salaries.txt', 'rt')
-updated = notfound = error = 0
+updated = notfound = error = invalid = 0
 
 for line in f.readlines():
     parts = line.strip().split(",")
     if len(parts) != 2:
+        invalid += 1
         continue          # Ignore line
 
     try:
@@ -23,8 +24,7 @@ for line in f.readlines():
             notfound += 1
     except Exception as ex:
         error += 1
-        # print(f"Error while updating employee {id} -> {ex}")
-
+        print(f"Error while updating employee {id} -> {ex}")
 
 con.commit()
 f.close()
@@ -33,4 +33,5 @@ con.close()
 
 print(f"Updated {updated} employees")
 print(f"Not found  {notfound} employees")
+print(f"Invalid {invalid} lines")
 print(f"Error updating  {error} employees")

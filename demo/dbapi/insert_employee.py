@@ -6,6 +6,7 @@ cur = con.cursor()
 name = input("Enter name :")
 job = input("Enter job :")
 salary = int(input("Enter salary :"))
+
 try:
     cur.execute("insert into employees(fullname,job,salary) values(?,?,?)",
                 (name, job, salary))
